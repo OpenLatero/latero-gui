@@ -1,0 +1,26 @@
+The software for the Latero device is divided into libraries and programs. The latero-gui program (this project) is a simple Graphical User Interface that makes it possible to control the position of each piezo-actuator individually. This program makes use of the latero library.
+
+This release of the sofware has been tested on  Mac OS X Maverick and Yosemite. Please follow these instructions. If you've successfully built and run this software on another platform, please list the steps you followed below.
+
+MAC OS X
+*********
+
+Step 0: Make sure the latero library is installed
+--------------------------------------------------
+See instructions in INSTALL file for latero project.
+
+Step 1: Install XQuartz
+------------------------
+If you already have XQuartz, skip to step 2. Otherwise, install it from http://xquartz.macosforge.org/landing/. X11 is no longer included with OS X.
+
+Step 2: Build latero-gui
+-----------------------------
+-- Correct search path so .pkg files are found (By default, pkg files installed by users are not part of the search path).
+>> export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/
+This needs to be done for each terminal that you start (as an alternative, you can add that line to the .profile file)
+-- Build latero-gui
+>> cmake . -G Xcode
+>> xcodebuild -target latero-gui
+>> sudo xcodebuild -target install
+
+You should now be able to launch the program latero-gui from /src/Debug/.
