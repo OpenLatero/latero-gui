@@ -15,10 +15,6 @@ If you already have XQuartz, skip to step 2. Otherwise, install it from http://x
 
 Step 2: Build latero-gui
 -----------------------------
--- Correct search path so .pkg files are found (By default, pkg files installed by users are not part of the search path).
->> export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig/
-This needs to be done for each terminal that you start (as an alternative, you can add that line to the .profile file)
--- Build latero-gui
 >> cmake . -G Xcode
 >> xcodebuild -target latero-gui
 >> sudo xcodebuild -target install
