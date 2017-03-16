@@ -20,3 +20,38 @@ Step 2: Build latero-gui
 >> sudo xcodebuild -target install
 
 You should now be able to launch the program latero-gui from /src/Debug/.
+
+
+Cygwin
+*********
+Step 0: Make sure the latero library is installed
+--------------------------------------------------
+See instructions in INSTALL file for latero project.
+
+
+Step 1: Install X window package
+----------------------------------
+See https://x.cygwin.com/docs/ug/setup.html and follow the instraction.
+
+
+Step 2: Bulid latero-gui
+----------------------------------
+>> cmake .
+>> make
+>> make install
+
+After you build the program, There is latero-gui.exe at ./src/Debug/
+
+
+Step 3: How to run latero-gui.exe
+----------------------------------
+You can't run from Cygwin terminal normaliy so follow these instraction.
+
+1, Run Xwin Server from windows start menu
+2, Click the cygwin icon from System tray(bottom right)
+   ->System tools
+   ->Cygwin terminal
+3, >> cd {path to directry with latero-gui.exe}
+   >> ./latero-gui.exe
+
+Then, program will run.
