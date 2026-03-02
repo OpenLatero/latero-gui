@@ -4,7 +4,7 @@ pkg_check_modules (LATERO latero)
 link_directories(${LATERO_LIBRARY_DIRS})
 include_directories(${LATERO_INCLUDE_DIRS})
 
-pkg_check_modules (GTKMM gtkmm-2.4)
+pkg_check_modules (GTKMM gtkmm-2.4 REQUIRED)
 link_directories(${GTKMM_LIBRARY_DIRS})
 include_directories(${GTKMM_INCLUDE_DIRS})
 
