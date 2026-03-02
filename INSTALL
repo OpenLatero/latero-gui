@@ -15,9 +15,11 @@ If you already have XQuartz, skip to step 2. Otherwise, install it from http://x
 
 Step 2: Build latero-gui
 -----------------------------
->> cmake . -G Xcode
->> xcodebuild -target latero-gui
->> sudo xcodebuild -target install
+>> mkdir build
+>> cd build
+>> cmake ..
+>> make
+>> sudo make install
 
 You should now be able to launch the program latero-gui from /src/Debug/.
 
