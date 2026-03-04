@@ -67,8 +67,10 @@ LateroWidget::LateroWidget() :
 	{
 		for (uint x=0; x<dev_->GetFrameSizeX(); ++x)
 		{
-			Gtk::Adjustment *adj = manage(new Gtk::Adjustment(0, -1, 1));
-			Gtk::HScale *scale = manage(new Gtk::HScale(*adj));
+            Glib::RefPtr<Gtk::Adjustment> adj = Gtk::Adjustment::create(0, -1, 1, 1, 10, 0);
+            Gtk::Scale*  scale = Gtk::make_managed<Gtk::Scale>();
+            scale->set_property("orientation", Gtk::ORIENTATION_HORIZONTAL);
+            scale->set_adjustment(adj);
 			scale->set_size_request(100, -1);
 			scale->set_digits(3);
 		
@@ -107,7 +109,7 @@ void LateroWidget::OnPiezoAdjChanged()
 	{
 		for (uint x=0; x<sx; ++x)
 		{
-			float v = piezoAdj_[y*sx + x]->get_value();
+            float v = piezoAdj_[y*sx + x]->get_value();
 			img.Set(x,y,v);
 		}
 	}

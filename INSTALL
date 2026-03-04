@@ -11,7 +11,7 @@ See instructions in INSTALL file for latero project.
 
 Step 1: Install dependencies
 -----------------------------
->> sudo port install pangomm-1.4 gtkmm +quartz xorg-server
+>> sudo port install gtkmm3 xorg-server
 
 Step 2: Build latero-gui
 -----------------------------

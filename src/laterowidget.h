@@ -42,7 +42,7 @@ public:
 protected:
 	void OnPiezoAdjChanged();
 
-	std::vector<Gtk::Adjustment*> piezoAdj_; 
+	std::vector<Glib::RefPtr<Gtk::Adjustment>> piezoAdj_; 
 	latero::TactileDisplay* dev_;	
 };
 
