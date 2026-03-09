@@ -11,7 +11,7 @@ See instructions in INSTALL file for latero project.
 
 Step 1: Install dependencies
 -----------------------------
->> sudo port install gtkmm3 xorg-server
+>> sudo port install gtkmm3 +quartz
 
 Step 2: Build latero-gui
 -----------------------------
@@ -21,7 +21,7 @@ Step 2: Build latero-gui
 >> make
 >> sudo make install
 
-You should now be able to launch the program latero-gui from /src/Debug/.
+You should now be able to launch the program latero-gui from /src.
 
 
 Cygwin
