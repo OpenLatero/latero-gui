@@ -2,26 +2,22 @@ The software for the Latero device is divided into libraries and programs. The l
 
 This release of the sofware has been tested on  Mac OS X Maverick and Yosemite. Please follow these instructions. If you've successfully built and run this software on another platform, please list the steps you followed below.
 
-MAC OS X
-*********
+MacOS
+*****
 
-Step 0: Make sure the latero library is installed
---------------------------------------------------
-See instructions in INSTALL file for latero project.
+Tested on MacOS Tahoe 26.3.1.
 
-Step 1: Install dependencies
------------------------------
+Install the latero library.
+
+Install dependencies
 >> sudo port install gtkmm3 +quartz
 
-Step 2: Build latero-gui
------------------------------
->> mkdir build
->> cd build
->> cmake ..
->> make
->> sudo make install
+Build the app
+>> cmake -B build
+>> cmake --build build
 
-You should now be able to launch the program latero-gui from /src.
+Run the app
+>> build/src/latero-gui
 
 
 Cygwin
