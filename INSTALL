@@ -13,7 +13,7 @@ Install dependencies
 >> sudo port install gtkmm3 +quartz
 
 Build the app
->> cmake -B build
+>> cmake --preset default
 >> cmake --build build
 
 Run the app
