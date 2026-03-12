@@ -24,6 +24,7 @@
 #include <gtkmm/filechooserdialog.h>
 #include <gtkmm/messagedialog.h>
 #include <gtkmm/stock.h>
+#include <gtkmm/grid.h>
 #include <math.h>
 
 LateroWidget::LateroWidget() :
@@ -59,9 +60,8 @@ LateroWidget::LateroWidget() :
 	*/
 	// TMP
 
-
-	Gtk::Table *table = manage(new Gtk::Table(dev_->GetFrameSizeX(), dev_->GetFrameSizeY()));;
-	add(*table);
+	auto grid = manage(new Gtk::Grid());
+	add(*grid);
 
 	for (uint y=0; y<dev_->GetFrameSizeY(); ++y)
 	{
@@ -77,7 +77,7 @@ LateroWidget::LateroWidget() :
 			piezoAdj_.push_back(adj);
 			adj->signal_value_changed().connect(sigc::mem_fun(*this, 
 				&LateroWidget::OnPiezoAdjChanged));
-			table->attach(*scale,  x, x+1, y, y+1);		
+			grid->attach(*scale,  x, y, 1, 1);		
 		}
 	}
 
