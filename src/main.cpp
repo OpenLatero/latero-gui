@@ -20,12 +20,11 @@
 // -----------------------------------------------------------
 
 #include "TestGui.h"
-#include <gtkmm/main.h>
+#include <gtkmm/application.h>
 
 int main(int argc, char* argv[])
 {
-	Gtk::Main kit(argc, argv);
+	auto app = Gtk::Application::create(argc, argv, "org.openlatero.latero-gui");
 	TestGui gui;
-	Gtk::Main::run(gui);
-	return 0;
+	return app->run(gui);
 };
