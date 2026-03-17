@@ -26,8 +26,12 @@
 TestGui::TestGui()
 { 
 	set_title("Latero Tester");
-	set_border_width(10);
-	add(*Gtk::manage(new LateroWidget()));
+	auto lateroWidget = Gtk::make_managed<LateroWidget>();
+	lateroWidget->set_margin_left(10);
+	lateroWidget->set_margin_right(10);
+	lateroWidget->set_margin_top(10);
+	lateroWidget->set_margin_bottom(10);
+	add(*lateroWidget);
 	show_all_children();
 }
 

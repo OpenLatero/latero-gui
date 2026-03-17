@@ -56,7 +56,7 @@ LateroWidget::LateroWidget() :
 	*/
 	// TMP
 
-	auto grid = manage(new Gtk::Grid());
+	auto grid = Gtk::make_managed<Gtk::Grid>();
 	add(*grid);
 
 	for (uint y=0; y<dev_->GetFrameSizeY(); ++y)
@@ -64,8 +64,7 @@ LateroWidget::LateroWidget() :
 		for (uint x=0; x<dev_->GetFrameSizeX(); ++x)
 		{
             Glib::RefPtr<Gtk::Adjustment> adj = Gtk::Adjustment::create(0, -1, 1, 1, 10, 0);
-            Gtk::Scale*  scale = Gtk::make_managed<Gtk::Scale>();
-            scale->set_property("orientation", Gtk::ORIENTATION_HORIZONTAL);
+            Gtk::Scale* scale = Gtk::make_managed<Gtk::Scale>(Gtk::ORIENTATION_HORIZONTAL);
             scale->set_adjustment(adj);
 			scale->set_size_request(100, -1);
 			scale->set_digits(3);
@@ -76,8 +75,6 @@ LateroWidget::LateroWidget() :
 			grid->attach(*scale,  x, y, 1, 1);		
 		}
 	}
-
-	show_all_children();
 }
 
 LateroWidget::~LateroWidget()
