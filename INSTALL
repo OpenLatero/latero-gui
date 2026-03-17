@@ -10,7 +10,7 @@ Tested on MacOS Tahoe 26.3.1.
 Install the latero library.
 
 Install dependencies
->> sudo port install gtkmm3 +quartz
+>> sudo port install gtkmm4 +quartz
 
 Build the app
 >> cmake --preset default
