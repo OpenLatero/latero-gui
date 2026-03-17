@@ -22,14 +22,7 @@
 #ifndef LATERO_WIDGET_H
 #define LATERO_WIDGET_H
 
-#include <gtkmm/window.h>
-#include <gtkmm/button.h>
-#include <gtkmm/box.h>
-#include <gtkmm/entry.h>
-#include <gtkmm/frame.h>
-#include <gtkmm/adjustment.h>
-#include <gtkmm/table.h>
-#include <gtkmm/scale.h>
+#include <gtkmm.h>
 #include <vector>
 #include <latero/tactiledisplay.h>
 

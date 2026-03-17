@@ -21,10 +21,6 @@
 
 #include "laterowidget.h"
 #include <iostream>
-#include <gtkmm/filechooserdialog.h>
-#include <gtkmm/messagedialog.h>
-#include <gtkmm/stock.h>
-#include <gtkmm/grid.h>
 #include <math.h>
 
 LateroWidget::LateroWidget() :

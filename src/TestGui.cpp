@@ -21,9 +21,6 @@
 
 #include "TestGui.h"
 #include <iostream>
-#include <gtkmm/filechooserdialog.h>
-#include <gtkmm/messagedialog.h>
-#include <gtkmm/stock.h>
 #include "laterowidget.h"
 
 TestGui::TestGui()
