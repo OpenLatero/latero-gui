@@ -26,7 +26,7 @@
 #include <vector>
 #include <latero/tactiledisplay.h>
 
-class TestGui : public Gtk::Window
+class TestGui : public Gtk::ApplicationWindow
 {
 public:
 
