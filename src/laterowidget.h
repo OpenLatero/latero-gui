@@ -19,8 +19,7 @@
 //
 // -----------------------------------------------------------
 
-#ifndef LATERO_WIDGET_H
-#define LATERO_WIDGET_H
+#pragma once
 
 #include <gtkmm.h>
 #include <vector>
@@ -39,4 +38,3 @@ protected:
 	latero::TactileDisplay* dev_;	
 };
 
-#endif

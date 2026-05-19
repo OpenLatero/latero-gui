@@ -19,8 +19,7 @@
 //
 // -----------------------------------------------------------
 
-#ifndef TEST_GUI_H
-#define TEST_GUI_H
+#pragma once
 
 #include <gtkmm.h>
 #include <vector>
@@ -34,4 +33,3 @@ public:
 	virtual ~TestGui();
 };
 
-#endif
