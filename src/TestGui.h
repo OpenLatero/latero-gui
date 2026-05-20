@@ -19,14 +19,13 @@
 //
 // -----------------------------------------------------------
 
-#ifndef TEST_GUI_H
-#define TEST_GUI_H
+#pragma once
 
 #include <gtkmm.h>
 #include <vector>
 #include <latero/tactiledisplay.h>
 
-class TestGui : public Gtk::Window
+class TestGui : public Gtk::ApplicationWindow
 {
 public:
 
@@ -34,4 +33,3 @@ public:
 	virtual ~TestGui();
 };
 
-#endif

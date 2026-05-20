@@ -25,6 +25,5 @@
 int main(int argc, char* argv[])
 {
 	auto app = Gtk::Application::create("org.openlatero.latero-gui");
-	TestGui gui;
-	return app->run(gui);
+	return app->make_window_and_run<TestGui>(argc, argv);
 };
