@@ -6,11 +6,7 @@ Graphical User Interface program that allows the individual testing of the actua
 
 The software for the Latero device is divided into libraries and programs. The latero-gui program (this project) is a simple Graphical User Interface that makes it possible to control the position of each piezo-actuator individually. This program makes use of the latero library.
 
-This release of the sofware has been tested on Mac OS X Maverick and Yosemite. Please follow these instructions. If you've successfully built and run this software on another platform, please list the steps you followed below.
-
 ### MacOS
-
-Tested on MacOS Tahoe 26.3.1.
 
 Install the latero library.
 
