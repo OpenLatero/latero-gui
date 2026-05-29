@@ -6,7 +6,9 @@ Graphical User Interface program that allows the individual testing of the actua
 
 ### MacOS
 
-Install the latero library.
+#### Install OpenLatero libraries
+
+Install the [latero](https://github.com/OpenLatero/latero) library.
 
 #### Install dependencies
 
