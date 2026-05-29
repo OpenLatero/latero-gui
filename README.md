@@ -16,15 +16,25 @@ The dependencies can be installed through [MacPorts](https://www.macports.org) w
 sudo port install gtkmm4 +quartz
 ```
 
-Build the app:
+#### Build and run the app
+
+The app can be compiled with the following commands:
+
 ```
 cmake --preset default
 cmake --build build
 ```
 
-Run the app:
+and ran with this command:
+
 ```
 build/src/latero-gui
+```
+
+or in a single command:
+
+```
+cmake --preset default && cmake --build build && build/src/latero-gui
 ```
 
 ### Cygwin
