@@ -8,7 +8,10 @@ Graphical User Interface program that allows the individual testing of the actua
 
 Install the latero library.
 
-Install dependencies:
+#### Install dependencies
+
+The dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
+
 ```
 sudo port install gtkmm4 +quartz
 ```
