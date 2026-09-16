@@ -18,6 +18,12 @@ The dependencies can be installed through [MacPorts](https://www.macports.org) w
 sudo port install gtkmm4 +quartz
 ```
 
+or through [Homebrew](https://brew.sh/) with the following command:
+
+```
+brew install gtkmm4
+```
+
 #### Build and run the app
 
 The app can be compiled with the following commands:
