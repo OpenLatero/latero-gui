@@ -4,7 +4,7 @@ Graphical User Interface program that allows the individual testing of the actua
 
 ## Installation
 
-### MacOS
+### MacOS / Linux
 
 #### Install OpenLatero libraries
 
@@ -12,7 +12,7 @@ Install the [latero](https://github.com/OpenLatero/latero) library.
 
 #### Install dependencies
 
-The dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
+On MacOS, the dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
 
 ```
 sudo port install gtkmm4 +quartz
@@ -21,7 +21,13 @@ sudo port install gtkmm4 +quartz
 or through [Homebrew](https://brew.sh/) with the following command:
 
 ```
-brew install gtkmm4
+brew install gtkmm4 pkg-config
+```
+
+On Linux, the dependencies can be installed with:
+
+```
+sudo apt install libgtkmm-4.0-dev pkg-config
 ```
 
 #### Build and run the app
