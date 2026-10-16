@@ -51,35 +51,44 @@ or in a single command:
 cmake --preset default && cmake --build build && build/src/latero-gui
 ```
 
-### Cygwin
+### Windows
 
-**Step 0: Make sure the latero library is installed**
+On Windows, the app is built natively with the GCC toolchain of [MSYS2](https://www.msys2.org).
 
-See instructions in INSTALL file for latero project.
+#### Install OpenLatero libraries
 
-**Step 1: Install X window package**
+Install the [latero](https://github.com/OpenLatero/latero) library, following its Windows instructions. This also sets
+up MSYS2 and the build tools.
 
-See https://x.cygwin.com/docs/ug/setup.html and follow the instructions.
+#### Install dependencies
 
-**Step 2: Build latero-gui**
+Open the **MSYS2 UCRT64** shell and install the dependencies with the following command:
+
 ```
-cmake .
-make
-make install
+pacman -S --needed mingw-w64-ucrt-x86_64-gtkmm-4.0 mingw-w64-ucrt-x86_64-pkgconf
 ```
 
-After you build the program, there is `latero-gui.exe` at `./src/Debug/`.
+Run all the commands below from the same UCRT64 shell.
 
-**Step 3: How to run latero-gui.exe**
+#### Build and run the app
 
-You can't run from Cygwin terminal normally, so follow these instructions:
+The app can be compiled with the following commands:
 
-1. Run Xwin Server from Windows start menu
-2. Click the Cygwin icon from System tray (bottom right) → System tools → Cygwin terminal
-3. Run:
 ```
-cd {path to directory with latero-gui.exe}
-./latero-gui.exe
+cmake --preset default
+cmake --build build
+```
+
+and ran with this command:
+
+```
+build/src/latero-gui
+```
+
+or in a single command:
+
+```
+cmake --preset default && cmake --build build && build/src/latero-gui
 ```
 
 ## Authors
