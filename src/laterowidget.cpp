@@ -22,11 +22,11 @@ LateroWidget::LateroWidget() :
 
 		float v = sin(2*M_PI*i/1000);
 
-		uint sx = dev_->GetFrameSizeX();
-		uint sy = dev_->GetFrameSizeY();
+		unsigned int sx = dev_->GetFrameSizeX();
+		unsigned int sy = dev_->GetFrameSizeY();
 		latero::RangeImg img(sx, sy);
-		for (uint y=0; y<sy; ++y)
-			for (uint x=0; x<sx; ++x)
+		for (unsigned int y=0; y<sy; ++y)
+			for (unsigned int x=0; x<sx; ++x)
 				img.Set(x,y,v);
 		dev_->WriteFrame(img);
 	}
@@ -38,9 +38,9 @@ LateroWidget::LateroWidget() :
 	auto grid = Gtk::make_managed<Gtk::Grid>();
 	set_child(*grid);
 
-	for (uint y=0; y<dev_->GetFrameSizeY(); ++y)
+	for (unsigned int y=0; y<dev_->GetFrameSizeY(); ++y)
 	{
-		for (uint x=0; x<dev_->GetFrameSizeX(); ++x)
+		for (unsigned int x=0; x<dev_->GetFrameSizeX(); ++x)
 		{
             Glib::RefPtr<Gtk::Adjustment> adj = Gtk::Adjustment::create(0, -1, 1, 1, 10, 0);
             Gtk::Scale* scale = Gtk::make_managed<Gtk::Scale>(Gtk::Orientation::HORIZONTAL);
@@ -74,13 +74,13 @@ void TestGui::OnError(std::string desc)
 
 void LateroWidget::OnPiezoAdjChanged()
 {
-	uint sx = dev_->GetFrameSizeX();
-	uint sy = dev_->GetFrameSizeY();
+	unsigned int sx = dev_->GetFrameSizeX();
+	unsigned int sy = dev_->GetFrameSizeY();
 
 	latero::RangeImg img(sx, sy);
-	for (uint y=0; y<sy; ++y)
+	for (unsigned int y=0; y<sy; ++y)
 	{
-		for (uint x=0; x<sx; ++x)
+		for (unsigned int x=0; x<sx; ++x)
 		{
             float v = piezoAdj_[y*sx + x]->get_value();
 			img.Set(x,y,v);
