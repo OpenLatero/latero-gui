@@ -4,7 +4,12 @@ Graphical User Interface program that allows the individual testing of the actua
 
 ## Installation
 
-### MacOS / Linux
+Expand the instructions for your platform.
+
+<details>
+<summary><b>macOS</b></summary>
+
+_Last tested on macOS 27.0._
 
 #### Install OpenLatero libraries
 
@@ -12,19 +17,53 @@ Install the [latero](https://github.com/OpenLatero/latero) library.
 
 #### Install dependencies
 
-On MacOS, the dependencies can be installed through [MacPorts](https://www.macports.org) with the following command:
-
-```
-sudo port install gtkmm4 +quartz
-```
-
-or through [Homebrew](https://brew.sh/) with the following command:
+Install the dependencies through [Homebrew](https://brew.sh/):
 
 ```
 brew install gtkmm4 pkg-config
 ```
 
-On Linux, the dependencies can be installed with:
+or through [MacPorts](https://www.macports.org):
+
+```
+sudo port install gtkmm4 +quartz
+```
+
+#### Build and run the app
+
+The app can be compiled with the following commands:
+
+```
+cmake --preset default
+cmake --build build
+```
+
+and ran with this command:
+
+```
+build/src/latero-gui
+```
+
+or in a single command:
+
+```
+cmake --preset default && cmake --build build && build/src/latero-gui
+```
+
+</details>
+
+<details>
+<summary><b>Linux</b></summary>
+
+_Last tested on Ubuntu 26.04._
+
+#### Install OpenLatero libraries
+
+Install the [latero](https://github.com/OpenLatero/latero) library.
+
+#### Install dependencies
+
+Install the dependencies with:
 
 ```
 sudo apt install libgtkmm-4.0-dev pkg-config
@@ -51,7 +90,12 @@ or in a single command:
 cmake --preset default && cmake --build build && build/src/latero-gui
 ```
 
-### Windows
+</details>
+
+<details>
+<summary><b>Windows</b></summary>
+
+_Last tested on Windows 11._
 
 On Windows, the app is built natively with the GCC toolchain of [MSYS2](https://www.msys2.org).
 
@@ -90,6 +134,8 @@ or in a single command:
 ```
 cmake --preset default && cmake --build build && build/src/latero-gui
 ```
+
+</details>
 
 ## Authors
 
