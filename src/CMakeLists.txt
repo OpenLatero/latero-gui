@@ -1,6 +1,6 @@
 include(FindPkgConfig)
 
-find_package(latero 0.1 REQUIRED)
+find_package(latero 0.2 REQUIRED)
 
 pkg_check_modules (GTKMM gtkmm-4.0 REQUIRED)
 link_directories(${GTKMM_LIBRARY_DIRS})
