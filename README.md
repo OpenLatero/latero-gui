@@ -9,8 +9,6 @@ Expand the instructions for your platform.
 <details>
 <summary><b>macOS</b></summary>
 
-_Last tested on macOS 27.0._
-
 #### Install OpenLatero libraries
 
 Install the [latero](https://github.com/OpenLatero/latero) library.
@@ -55,8 +53,6 @@ cmake --preset default && cmake --build build && build/src/latero-gui
 <details>
 <summary><b>Linux</b></summary>
 
-_Last tested on Ubuntu 26.04._
-
 #### Install OpenLatero libraries
 
 Install the [latero](https://github.com/OpenLatero/latero) library.
@@ -94,8 +90,6 @@ cmake --preset default && cmake --build build && build/src/latero-gui
 
 <details>
 <summary><b>Windows</b></summary>
-
-_Last tested on Windows 11._
 
 On Windows, the app is built natively with the GCC toolchain of [MSYS2](https://www.msys2.org).
 
